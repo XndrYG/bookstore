@@ -2,6 +2,7 @@ extends ../layout
 
 block content
     a(href=`/books/edit/${book.id}`) Edit Book
+    a(href=`/books/delete/${book.id}`) Delete Book
     div
         p Title: #{book.title}
         p Publisher: #{book.publisher}

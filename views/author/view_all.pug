@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+    h3 Authors
+    a(href='/authors/add') Add New Author
+    table
+        thead
+            tr
+                th First Name
+                th Last Name
+                th Date of birth
+                th Written Books
+                th
+        tbody
+            each author in authors
+                tr
+                    td= author.first_name
+                    td= author.last_name
+                    td= author.birth
+                    td= author.written
+                    td
+                        a(href=`/authors/profile/${author.id}`) View Author
